@@ -1,0 +1,12 @@
+{
+	"Stick": {
+		"ItemCategory": "Resource",
+		"StackSize": 99,
+		"Description": "Looks brown and sticky."
+	},
+	"Rock": {
+		"ItemCategory": "Resource",
+		"StackSize": 99,
+		"Description": "Designed specifically for breaking glass houses."
+	}
+}

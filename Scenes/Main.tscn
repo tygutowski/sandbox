@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/KinematicBody2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/TileMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/SaveGame.gd" type="Script" id=6]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 4 )
+saveGameClass = ExtResource( 6 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 7.76473, -689.308 )
+playerSpeed = 300
+jumpHeight = 400
+gravity = 1500
+
+[node name="Camera" parent="Player" instance=ExtResource( 3 )]
+visible = true
+position = Vector2( -7.74403, 37.5299 )
+current = true
+zoom = Vector2( 0.75, 0.75 )
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+visible = true
+position = Vector2( 0.00261688, 0.0125318 )
+cell_quadrant_size = 1
+tile_data = PoolIntArray(  )
